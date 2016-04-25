@@ -5,5 +5,6 @@ class Gram < ActiveRecord::Base
   validates :picture, :presence => true  
 
   belongs_to :user
+  has_many :comments
   
 end
