@@ -1,0 +1,12 @@
+<h1>Gram!</h1>
+<div><%= @gram.inspect %>
+
+<div class="">
+  <h1>Edit Your Gram Message</h1>
+  <%= simple_form_for @gram do |f| %>
+    <%= f.input :message %>
+
+    <br />
+    <%= f.submit 'Update', class: 'btn btn-primary' %>
+  <% end %>
+</div>
