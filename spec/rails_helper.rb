@@ -32,6 +32,8 @@ ActiveRecord::Migration.check_pending!
 
 RSpec.configure do |config|
 
+  include ActionDispatch::TestProcess # for file uploads
+
   config.include Devise::TestHelpers, type: :controller
   
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
