@@ -1,4 +1,5 @@
 # encoding: utf-8
+require 'carrierwave/processing/rmagick'
 
 class PictureUploader < CarrierWave::Uploader::Base
 
@@ -47,5 +48,15 @@ class PictureUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+  include CarrierWave::MiniMagick
+
+
+  def fix_exif_rotation 
+    manipulate! do |img|
+      img.tap(&:auto_orient)
+    end
+  end
+
+  process :fix_exif_rotation
 
 end

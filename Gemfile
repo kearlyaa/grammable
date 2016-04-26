@@ -39,6 +39,7 @@ gem 'devise', '>= 3.2.4'
 gem 'carrierwave' # image uploads
 gem "figaro"
 gem "fog", "~> 1.3.1"
+gem "mini_magick"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
